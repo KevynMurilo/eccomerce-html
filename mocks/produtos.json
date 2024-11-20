@@ -2,7 +2,7 @@
     {
         "id": 1,
         "nome": "Jaqueta Piqué Biker",
-        "categoria": "Roupas",
+        "categoria": "Roupas, Homem",
         "marca": "Gucci",
         "preco": 67.24,
         "cores": ["Preto", "Cinza"],
@@ -13,7 +13,7 @@
     {
         "id": 2,
         "nome": "Bolsa de Peito Multi-bolsos",
-        "categoria": "Bolsas",
+        "categoria": "Bolsas, Mulher",
         "marca": "Louis Vuitton",
         "preco": 43.48,
         "cores": ["Preto", "Bege"],
@@ -24,7 +24,7 @@
     {
         "id": 3,
         "nome": "Boné Texturizado Diagonal",
-        "categoria": "Acessórios",
+        "categoria": "Acessórios, Homem",
         "marca": "Chanel",
         "preco": 60.90,
         "cores": ["Azul", "Preto"],
@@ -35,7 +35,7 @@
     {
         "id": 4,
         "nome": "Botas de Tornozelo",
-        "categoria": "Sapatos",
+        "categoria": "Sapatos, Mulher",
         "marca": "Hermes",
         "preco": 98.49,
         "cores": ["Preto", "Marrom"],
@@ -46,7 +46,7 @@
     {
         "id": 5,
         "nome": "Lenço Básico",
-        "categoria": "Acessórios",
+        "categoria": "Acessórios, Mulher",
         "marca": "Gucci",
         "preco": 26.28,
         "cores": ["Cinza", "Branco"],
@@ -57,7 +57,7 @@
     {
         "id": 6,
         "nome": "Tênis Esportivo",
-        "categoria": "Sapatos",
+        "categoria": "Sapatos, Homem",
         "marca": "Nike",
         "preco": 120.00,
         "cores": ["Branco", "Preto"],
@@ -68,7 +68,7 @@
     {
         "id": 7,
         "nome": "Vestido Floral",
-        "categoria": "Roupas",
+        "categoria": "Roupas, Mulher",
         "marca": "Zara",
         "preco": 75.00,
         "cores": ["Azul", "Verde"],
@@ -79,7 +79,7 @@
     {
         "id": 8,
         "nome": "Chapéu de Palha",
-        "categoria": "Acessórios",
+        "categoria": "Acessórios, Mulher",
         "marca": "Armani",
         "preco": 35.50,
         "cores": ["Bege"],
@@ -90,7 +90,7 @@
     {
         "id": 9,
         "nome": "Camisa Polo",
-        "categoria": "Roupas",
+        "categoria": "Roupas, Homem",
         "marca": "Lacoste",
         "preco": 55.00,
         "cores": ["Branco", "Azul"],
@@ -101,7 +101,7 @@
     {
         "id": 10,
         "nome": "Mochila Casual",
-        "categoria": "Bolsas",
+        "categoria": "Bolsas, Mulher",
         "marca": "Adidas",
         "preco": 85.00,
         "cores": ["Preto", "Cinza"],
@@ -112,7 +112,7 @@
     {
         "id": 11,
         "nome": "Calça Jeans Slim",
-        "categoria": "Roupas",
+        "categoria": "Roupas, Homem",
         "marca": "Levi's",
         "preco": 95.00,
         "cores": ["Azul"],
@@ -123,7 +123,7 @@
     {
         "id": 12,
         "nome": "Bolsa de Couro",
-        "categoria": "Bolsas",
+        "categoria": "Bolsas, Mulher",
         "marca": "Prada",
         "preco": 200.00,
         "cores": ["Marrom", "Preto"],
@@ -134,7 +134,7 @@
     {
         "id": 13,
         "nome": "Tênis de Corrida",
-        "categoria": "Sapatos",
+        "categoria": "Sapatos, Homem",
         "marca": "Reebok",
         "preco": 90.00,
         "cores": ["Vermelho", "Preto"],
@@ -145,7 +145,7 @@
     {
         "id": 14,
         "nome": "Óculos de Sol",
-        "categoria": "Acessórios",
+        "categoria": "Acessórios, Mulher",
         "marca": "Ray-Ban",
         "preco": 150.00,
         "cores": ["Preto", "Marrom"],
@@ -156,7 +156,7 @@
     {
         "id": 15,
         "nome": "Blusa Manga Longa",
-        "categoria": "Roupas",
+        "categoria": "Roupas, Mulher",
         "marca": "H&M",
         "preco": 40.00,
         "cores": ["Preto", "Cinza"],
@@ -167,7 +167,7 @@
     {
         "id": 16,
         "nome": "Relógio de Pulso",
-        "categoria": "Acessórios",
+        "categoria": "Acessórios, Homem",
         "marca": "Fossil",
         "preco": 120.00,
         "cores": ["Prata", "Dourado"],
@@ -178,7 +178,7 @@
     {
         "id": 17,
         "nome": "Camiseta Básica",
-        "categoria": "Roupas",
+        "categoria": "Roupas, Homem",
         "marca": "Uniqlo",
         "preco": 25.00,
         "cores": ["Branco", "Cinza"],
@@ -189,7 +189,7 @@
     {
         "id": 18,
         "nome": "Carteira de Couro",
-        "categoria": "Acessórios",
+        "categoria": "Acessórios, Mulher",
         "marca": "Tommy Hilfiger",
         "preco": 55.00,
         "cores": ["Preto", "Marrom"],
@@ -200,7 +200,7 @@
     {
         "id": 19,
         "nome": "Bota de Inverno",
-        "categoria": "Sapatos",
+        "categoria": "Sapatos, Mulher",
         "marca": "Timberland",
         "preco": 140.00,
         "cores": ["Marrom", "Preto"],
@@ -211,7 +211,7 @@
     {
         "id": 20,
         "nome": "Vestido Casual",
-        "categoria": "Roupas",
+        "categoria": "Roupas, Mulher",
         "marca": "Forever 21",
         "preco": 65.00,
         "cores": ["Azul", "Vermelho"],
@@ -222,7 +222,7 @@
     {
         "id": 21,
         "nome": "Calça Legging",
-        "categoria": "Roupas",
+        "categoria": "Roupas, Mulher",
         "marca": "Nike",
         "preco": 50.00,
         "cores": ["Preto", "Cinza"],
@@ -233,7 +233,7 @@
     {
         "id": 22,
         "nome": "Cinto de Couro",
-        "categoria": "Acessórios",
+        "categoria": "Acessórios, Mulher",
         "marca": "Armani",
         "preco": 45.00,
         "cores": ["Preto", "Marrom"],
@@ -244,7 +244,7 @@
     {
         "id": 23,
         "nome": "Tênis Casual",
-        "categoria": "Sapatos",
+        "categoria": "Sapatos, Homem",
         "marca": "Vans",
         "preco": 60.00,
         "cores": ["Preto", "Branco"],
@@ -255,7 +255,7 @@
     {
         "id": 24,
         "nome": "Blazer Social",
-        "categoria": "Roupas",
+        "categoria": "Roupas, Homem",
         "marca": "Hugo Boss",
         "preco": 200.00,
         "cores": ["Cinza", "Preto"],
@@ -266,7 +266,7 @@
     {
         "id": 25,
         "nome": "Sapatilha Feminina",
-        "categoria": "Sapatos",
+        "categoria": "Sapatos, Mulher",
         "marca": "Moleca",
         "preco": 35.00,
         "cores": ["Preto", "Bege"],
@@ -277,7 +277,7 @@
     {
         "id": 26,
         "nome": "Terno Completo",
-        "categoria": "Roupas",
+        "categoria": "Roupas, Homem",
         "marca": "Zegna",
         "preco": 350.00,
         "cores": ["Preto"],
@@ -288,7 +288,7 @@
     {
         "id": 27,
         "nome": "Vestido de Festa",
-        "categoria": "Roupas",
+        "categoria": "Roupas, Mulher",
         "marca": "Versace",
         "preco": 500.00,
         "cores": ["Vermelho", "Preto"],
@@ -299,7 +299,7 @@
     {
         "id": 28,
         "nome": "Chinelo de Praia",
-        "categoria": "Sapatos",
+        "categoria": "Sapatos, Homem",
         "marca": "Havaianas",
         "preco": 15.00,
         "cores": ["Azul", "Amarelo"],
@@ -310,7 +310,7 @@
     {
         "id": 29,
         "nome": "Cachecol de Lã",
-        "categoria": "Acessórios",
+        "categoria": "Acessórios, Mulher",
         "marca": "Burberry",
         "preco": 70.00,
         "cores": ["Cinza", "Preto"],
@@ -321,7 +321,7 @@
     {
         "id": 30,
         "nome": "Suéter de Lã",
-        "categoria": "Roupas",
+        "categoria": "Roupas, Homem",
         "marca": "Uniqlo",
         "preco": 80.00,
         "cores": ["Branco", "Azul"],
