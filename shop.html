@@ -126,10 +126,7 @@
                 <div class="col-lg-3">
                     <div class="shop__sidebar">
                         <div class="shop__sidebar__search">
-                            <form action="#">
-                                <input type="text" placeholder="Buscar...">
-                                <button type="submit"><span class="icon_search"></span></button>
-                            </form>
+                            <input type="text" id="search-box" placeholder="Buscar produtos..." />
                         </div>
                         <div class="shop__sidebar__accordion">
                             <div class="accordion" id="accordionExample">
@@ -154,11 +151,8 @@
                                     <div id="collapseTwo" class="collapse show" data-parent="#accordionExample">
                                         <div class="card-body">
                                             <div class="shop__sidebar__brand">
-                                                <ul>
-                                                    <li><a href="#">Louis Vuitton</a></li>
-                                                    <li><a href="#">Chanel</a></li>
-                                                    <li><a href="#">Hermes</a></li>
-                                                    <li><a href="#">Gucci</a></li>
+                                                <ul id="brand-list">
+                                                    
                                                 </ul>
                                             </div>
                                         </div>
@@ -171,13 +165,8 @@
                                     <div id="collapseThree" class="collapse show" data-parent="#accordionExample">
                                         <div class="card-body">
                                             <div class="shop__sidebar__price">
-                                                <ul>
-                                                    <li><a href="#">$0.00 - $50.00</a></li>
-                                                    <li><a href="#">$50.00 - $100.00</a></li>
-                                                    <li><a href="#">$100.00 - $150.00</a></li>
-                                                    <li><a href="#">$150.00 - $200.00</a></li>
-                                                    <li><a href="#">$200.00 - $250.00</a></li>
-                                                    <li><a href="#">250.00+</a></li>
+                                                <ul id="price-list">
+                                                    
                                                 </ul>
                                             </div>
                                         </div>
@@ -345,6 +334,7 @@
     <script src="js/main.js"></script>
     <script src="js/product-list.js"></script>
     <script src="js/categories.js"></script>
+    <script src="js/filter.js"></script>
 
 </body>
 
