@@ -41,7 +41,7 @@
         <div class="offcanvas__nav__option">
             <a href="#" class="search-switch"><img src="img/icon/search.svg" alt=""></a>
             <a href="./shopping-cart.html"><img src="img/icon/cart.svg" alt=""> <span class="count_cart">0</span></a>
-            <div class="price">R$0,00</div>
+            <div class="price" id="cart-total">R$0,00</div>
         </div>
         <div id="mobile-menu-wrap"></div>
         <div class="offcanvas__text">
@@ -92,7 +92,7 @@
                     <div class="header__nav__option">
                         <a href="#" class="search-switch"><img src="img/icon/search.svg" alt=""></a>
                         <a href="./shopping-cart.html"><img src="img/icon/cart.svg" alt=""> <span class="count_cart">0</span></a>
-                        <div class="price">R$0,00</div>
+                        <div class="price" id="cart-total">R$0,00</div>
                     </div>
                 </div>
             </div>
@@ -178,20 +178,8 @@
                                 </div>
                             </div>
                         </div>
-                        <div class="col-lg-4 col-md-6">
-                            <div class="checkout__order">
-                                <h4>Seu Pedido</h4>
-                                <div class="checkout__order__products">Produtos </div>
-                                <ul>
-                                    <li>Camisa Gucci <span>R$55.00</span></li>
-                                    <li>Calça Louis Vitton <span>R$32.00</span></li>
-                                </ul>
-                                <div class="checkout__order__subtotal">Subtotal <span>R$87.00</span></div>
-                                <div class="checkout__order__total">Total <span>R$87.00</span></div>
-                                <a href="#" class="site-btn">FINALIZAR COMPRA</a>
-                            </div>
-                        </div>
                     </div>
+                    <a href="#" class="site-btn">FINALIZAR COMPRA</a>
                 </form>
             </div>
         </div>
@@ -269,6 +257,7 @@
     <script src="js/owl.carousel.min.js"></script>
     <script src="js/jquery.magnific-popup.min.js"></script>
     <script src="js/main.js"></script>
+    <script src="js/updateCartInfo.js"></script>
 </body>
 
 </html>
