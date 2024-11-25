@@ -2393,6 +2393,7 @@ ol {
 	border-radius: 50%;
 	line-height: 40px;
 	text-align: center;
+	cursor: pointer;
 }
 
 .continue__btn.update__btn {

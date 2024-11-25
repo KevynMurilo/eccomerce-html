@@ -41,7 +41,7 @@
         <div class="offcanvas__nav__option">
             <a href="#" class="search-switch"><img src="img/icon/search.svg" alt=""></a>
             <a href="./shopping-cart.html"><img src="img/icon/cart.svg" alt=""> <span class="count_cart">0</span></a>
-            <div class="price">R$0.00</div>
+            <div class="price" id="cart-total">R$0.00</div>
         </div>
         <div id="mobile-menu-wrap"></div>
         <div class="offcanvas__text">
@@ -81,9 +81,9 @@
                     <nav class="header__menu mobile-menu">
                         <ul>
                             <li><a href="./index.html">Início</a></li>
-                            <li class="active"><a href="./shop.html">Loja</a></li>
+                            <li><a href="./shop.html">Loja</a></li>
                             <li><a href="./about.html">Sobre Nós</a></li>
-                            <li><a href="./shopping-cart.html">Carrinho</a></li>
+                            <li class="active"><a href="./shopping-cart.html">Carrinho</a></li>
                             <li><a href="./contact.html">Contatos</a></li>  
                         </ul>
                     </nav>
@@ -92,7 +92,7 @@
                     <div class="header__nav__option">
                         <a href="#" class="search-switch"><img src="img/icon/search.svg" alt=""></a>
                         <a href="./shopping-cart.html"><img src="img/icon/cart.svg" alt=""> <span class="count_cart">0</span></a>
-                        <div class="price">R$0.00</div>
+                        <div class="price" id="cart-total">R$0.00</div>
                     </div>
                 </div>
             </div>
@@ -135,87 +135,8 @@
                                     <th></th>
                                 </tr>
                             </thead>
-                            <tbody>
-                                <tr>
-                                    <td class="product__cart__item">
-                                        <div class="product__cart__item__pic">
-                                            <img src="img/shopping-cart/cart-1.jpg" alt="">
-                                        </div>
-                                        <div class="product__cart__item__text">
-                                            <h6>T-shirt Contraste Bolso</h6>
-                                            <h5>R$98.49</h5>
-                                        </div>
-                                    </td>
-                                    <td class="quantity__item">
-                                        <div class="quantity">
-                                            <div class="pro-qty-2">
-                                                <input type="text" value="1">
-                                            </div>
-                                        </div>
-                                    </td>
-                                    <td class="cart__price">R$ 30.00</td>
-                                    <td class="cart__close"><i class="fa fa-close"></i></td>
-                                </tr>
-                                <tr>
-                                    <td class="product__cart__item">
-                                        <div class="product__cart__item__pic">
-                                            <img src="img/shopping-cart/cart-2.jpg" alt="">
-                                        </div>
-                                        <div class="product__cart__item__text">
-                                            <h6>Diagonal Textured Cap</h6>
-                                            <h5>R$98.49</h5>
-                                        </div>
-                                    </td>
-                                    <td class="quantity__item">
-                                        <div class="quantity">
-                                            <div class="pro-qty-2">
-                                                <input type="text" value="1">
-                                            </div>
-                                        </div>
-                                    </td>
-                                    <td class="cart__price">R$ 32.50</td>
-                                    <td class="cart__close"><i class="fa fa-close"></i></td>
-                                </tr>
-                                <tr>
-                                    <td class="product__cart__item">
-                                        <div class="product__cart__item__pic">
-                                            <img src="img/shopping-cart/cart-3.jpg" alt="">
-                                        </div>
-                                        <div class="product__cart__item__text">
-                                            <h6>Cachecol Esvoaçante Básico</h6>
-                                            <h5>R$98.49</h5>
-                                        </div>
-                                    </td>
-                                    <td class="quantity__item">
-                                        <div class="quantity">
-                                            <div class="pro-qty-2">
-                                                <input type="text" value="1">
-                                            </div>
-                                        </div>
-                                    </td>
-                                    <td class="cart__price">R$ 47.00</td>
-                                    <td class="cart__close"><i class="fa fa-close"></i></td>
-                                </tr>
-                                <tr>
-                                    <td class="product__cart__item">
-                                        <div class="product__cart__item__pic">
-                                            <img src="img/shopping-cart/cart-4.jpg" alt="">
-                                        </div>
-                                        <div class="product__cart__item__text">
-                                            <h6>Cachecol Esvoaçante Básico</h6>
-                                            <h5>R$98.49</h5>
-                                        </div>
-                                    </td>
-                                    <td class="quantity__item">
-                                        <div class="quantity">
-                                            <div class="pro-qty-2">
-                                                <input type="text" value="1">
-                                            </div>
-                                        </div>
-                                    </td>
-                                    <td class="cart__price">R$ 30.00</td>
-                                    <td class="cart__close"><i class="fa fa-close"></i></td>
-                                </tr>
+                            <tbody id="cart-items">
+                                 <!-- Itens do carrinho serão adicionados aqui dinamicamente -->
                             </tbody>
                         </table>
                     </div>
@@ -225,7 +146,11 @@
                                 <a href="#">Continuar comprando</a>
                             </div>
                         </div>
-                        
+                        <div class="col-lg-6 col-md-6 col-sm-6">
+                            <div class="continue__btn update__btn">
+                                <a href="#" onclick="updateCart()"><i class="fa fa-spinner"></i> Atualizar Carrinho</a>
+                            </div>
+                        </div>
                     </div>
                 </div>
                 <div class="col-lg-4">
@@ -239,8 +164,7 @@
                     <div class="cart__total">
                         <h6>Total do carrinho</h6>
                         <ul>
-                            <li>Subtotal <span>R$ 169.50</span></li>
-                            <li>Total <span>R$ 169.50</span></li>
+                            <li>Total <span id="cart-total">R$0.00</span></li>
                         </ul>
                         <a href="./checkout.html" class="primary-btn">Prossiga para a finalização da compra</a>
                     </div>
@@ -335,6 +259,7 @@
     <script src="js/mixitup.min.js"></script>
     <script src="js/owl.carousel.min.js"></script>
     <script src="js/main.js"></script>
+    <script src="js/logicCart.js"></script>
 </body>
 
 </html>
