@@ -24,7 +24,7 @@ document.addEventListener("DOMContentLoaded", () => {
                                 </div>
                                 <div class="product__item__text">
                                     <h6>${product.nome}</h6>
-                                    <a href="#" class="add-cart">+ Adicionar ao carrinho</a>
+                                    <a href="#" class="add-cart" data-product-id="${product.id}">+ Adicionar ao carrinho</a>
                                     <div class="rating">
                                         <i class="fa fa-star-o"></i>
                                         <i class="fa fa-star-o"></i>
@@ -33,12 +33,21 @@ document.addEventListener("DOMContentLoaded", () => {
                                         <i class="fa fa-star-o"></i>
                                     </div>
                                     <h5>$${product.preco.toFixed(2)}</h5>
-                                    
                                 </div>
                             </div>
                         </div>
                     `;
                     productContainer.innerHTML += productHTML;
+                });
+
+                // Adiciona funcionalidade ao botão "Adicionar ao Carrinho"
+                document.querySelectorAll(".add-cart").forEach((button) => {
+                    button.addEventListener("click", (e) => {
+                        e.preventDefault();
+                        const productId = parseInt(e.target.dataset.productId);
+                        const product = products.find((p) => p.id === productId);
+                        addToCart(product); // Chama a função do cart.js
+                    });
                 });
             };
 
@@ -66,12 +75,9 @@ document.addEventListener("DOMContentLoaded", () => {
 
             // Função para atualizar o link ativo
             const updateActivePage = (activeLink) => {
-                // Remove a classe "active" de todos os links
                 document.querySelectorAll("#pagination-container a").forEach((link) => {
                     link.classList.remove("active");
                 });
-
-                // Adiciona a classe "active" ao link clicado
                 activeLink.classList.add("active");
             };
 
