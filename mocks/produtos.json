@@ -8,7 +8,7 @@
         "cores": ["Preto", "Cinza"],
         "tamanho": ["PP", "P", "M"],
         "desconto": false,
-        "imagem": "img/product/product-1.jpg"
+        "imagem": "img/product/product-2.jpg"
     },
     {
         "id": 2,
@@ -19,13 +19,13 @@
         "cores": ["Preto", "Bege"],
         "tamanho": ["Único"],
         "desconto": true,
-        "imagem": "img/product/product-2.jpg"
+        "imagem": "img/product/product-7.jpg"
     },
     {
         "id": 3,
-        "nome": "Boné Texturizado Diagonal",
-        "categoria": "Acessórios, Homem",
-        "marca": "Chanel",
+        "nome": "Tênis Casual",
+        "categoria": "Sapatos, Homem, Mulher",
+        "marca": "Nike",
         "preco": 60.90,
         "cores": ["Azul", "Preto"],
         "tamanho": ["Único"],
@@ -34,9 +34,9 @@
     },
     {
         "id": 4,
-        "nome": "Botas de Tornozelo",
-        "categoria": "Sapatos, Mulher",
-        "marca": "Hermes",
+        "nome": "Blusa de Frio",
+        "categoria": "Roupas, Homem",
+        "marca": "Adidas",
         "preco": 98.49,
         "cores": ["Preto", "Marrom"],
         "tamanho": ["PP", "P", "M", "G"],
@@ -52,18 +52,18 @@
         "cores": ["Cinza", "Branco"],
         "tamanho": ["Único"],
         "desconto": false,
-        "imagem": "img/product/product-5.jpg"
+        "imagem": "img/product/product-6.jpg"
     },
     {
         "id": 6,
-        "nome": "Tênis Esportivo",
-        "categoria": "Sapatos, Homem",
+        "nome": "Camisa Streetwear",
+        "categoria": "Roupas, Homem",
         "marca": "Nike",
         "preco": 120.00,
         "cores": ["Branco", "Preto"],
         "tamanho": ["P", "M", "G"],
         "desconto": true,
-        "imagem": "img/product/product-6.jpg"
+        "imagem": "img/product/product-5.jpg"
     },
     {
         "id": 7,
@@ -74,22 +74,22 @@
         "cores": ["Azul", "Verde"],
         "tamanho": ["PP", "P", "M", "G"],
         "desconto": false,
-        "imagem": "img/product/product-7.jpg"
+        "imagem": "img/product/product-1.jpg"
     },
     {
         "id": 8,
-        "nome": "Chapéu de Palha",
-        "categoria": "Acessórios, Mulher",
+        "nome": "Camiseta Básica Azul",
+        "categoria": "Roupas, Homem",
         "marca": "Armani",
         "preco": 35.50,
-        "cores": ["Bege"],
+        "cores": ["Azul"],
         "tamanho": ["Único"],
         "desconto": false,
         "imagem": "img/product/product-8.jpg"
     },
     {
         "id": 9,
-        "nome": "Camisa Polo",
+        "nome": "Camisa Polo Floral",
         "categoria": "Roupas, Homem",
         "marca": "Lacoste",
         "preco": 55.00,
@@ -100,9 +100,9 @@
     },
     {
         "id": 10,
-        "nome": "Mochila Casual",
-        "categoria": "Bolsas, Mulher",
-        "marca": "Adidas",
+        "nome": "Kit perfume",
+        "categoria": "Perfume, Mulher",
+        "marca": "Jequiti",
         "preco": 85.00,
         "cores": ["Preto", "Cinza"],
         "tamanho": ["Único"],
@@ -111,19 +111,19 @@
     },
     {
         "id": 11,
-        "nome": "Calça Jeans Slim",
-        "categoria": "Roupas, Homem",
+        "nome": "Mochila Escolar Branca",
+        "categoria": "Acessórios, Homem, Mulher",
         "marca": "Levi's",
         "preco": 95.00,
-        "cores": ["Azul"],
+        "cores": ["Branco"],
         "tamanho": ["P", "M", "G", "GG"],
         "desconto": true,
         "imagem": "img/product/product-11.jpg"
     },
     {
         "id": 12,
-        "nome": "Bolsa de Couro",
-        "categoria": "Bolsas, Mulher",
+        "nome": "Blusa de Frio CorpCore",
+        "categoria": "Roupas, Mulher",
         "marca": "Prada",
         "preco": 200.00,
         "cores": ["Marrom", "Preto"],
@@ -133,8 +133,8 @@
     },
     {
         "id": 13,
-        "nome": "Tênis de Corrida",
-        "categoria": "Sapatos, Homem",
+        "nome": "Bolsa de Coro",
+        "categoria": "Bolsas, Mulher",
         "marca": "Reebok",
         "preco": 90.00,
         "cores": ["Vermelho", "Preto"],
