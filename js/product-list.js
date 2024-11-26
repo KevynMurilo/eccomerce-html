@@ -15,16 +15,16 @@ document.addEventListener("DOMContentLoaded", () => {
                 products.forEach((product) => {
                     const productHTML = `
                         <div class="col-lg-4 col-md-6 col-sm-6">
-                            <div class="product__item ${product.desconto ? "sale" : ""}">
-                                    <a href="shop-details.html?id=${product.id}">
-                                        <div class="product__item__pic set-bg" style="background-image: url('${product.imagem}')">
-                                            ${product.desconto ? '<span class="label">Desconto</span>' : ""}
-                                            <ul class="product__hover">
-                                                <li><a href="#"><img src="img/icon/heart.png" alt="Favorito"></a></li>
-                                            </ul>
-                                        </div>
-                                    </a>
-                                <div class="product__item__text">
+                            <div class="product__item ${product.desconto ? "sale" : ""}" style="position: relative;">
+                                <a href="shop-details.html?id=${product.id}" class="d-block" style="position: absolute; top: 0; left: 0; right: 0; bottom: 0; z-index: 1;">
+                                    <div class="product__item__pic set-bg" style="background-image: url('${product.imagem}')">
+                                        ${product.desconto ? '<span class="label">Desconto</span>' : ""}
+                                        <ul class="product__hover">
+                                            <li><a href="#"><img src="img/icon/heart.png" alt="Favorito"></a></li>
+                                        </ul>
+                                    </div>
+                                </a>
+                                <div class="product__item__text" style="z-index: 0;">
                                     <h6>${product.nome}</h6>
                                     <a href="#" class="add-cart" data-product-id="${product.id}">+ Adicionar ao carrinho</a>
                                     <div class="rating">
@@ -41,17 +41,18 @@ document.addEventListener("DOMContentLoaded", () => {
                     `;
                     productContainer.innerHTML += productHTML;
                 });
+            };            
+                     
 
-                // Adiciona funcionalidade ao botão "Adicionar ao Carrinho"
-                document.querySelectorAll(".add-cart").forEach((button) => {
-                    button.addEventListener("click", (e) => {
-                        e.preventDefault();
-                        const productId = parseInt(e.target.dataset.productId);
-                        const product = products.find((p) => p.id === productId);
-                        addToCart(product); // Chama a função do cart.js
-                    });
+            // Adiciona funcionalidade ao botão "Adicionar ao Carrinho"
+            document.querySelectorAll(".add-cart").forEach((button) => {
+                button.addEventListener("click", (e) => {
+                    e.preventDefault();
+                    const productId = parseInt(e.target.dataset.productId);
+                    const product = mockData.find((p) => p.id === productId);
+                    addToCart(product); // Chama a função do cart.js
                 });
-            };
+            });
 
             // Função para renderizar a navegação da paginação
             const renderPagination = () => {
