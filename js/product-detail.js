@@ -111,26 +111,6 @@ function renderProductDetails(product) {
 
     // Load random related products
     loadRandomRelatedProducts();
-
-    // Add functionality to "Adicionar ao Carrinho" button
-    const addToCartBtn = document.getElementById('addToCartBtn');
-    if (addToCartBtn) {
-        addToCartBtn.addEventListener('click', function(event) {
-            event.preventDefault(); // Previne o comportamento padrão do link
-
-            const productQuantity = parseInt(document.getElementById('product-quantity').value) || 1;
-            const productData = {
-                id: product.id,
-                name: product.nome,
-                price: product.preco,
-                quantity: productQuantity,
-                image: product.imagem
-            };
-
-            // Chama a função de adicionar ao carrinho
-            addToCart(productData);
-        });
-    }
 }
 
 // Function to load random related products
@@ -164,6 +144,7 @@ function loadRandomRelatedProducts() {
                                         <i class="fa fa-star-o"></i>
                                         <i class="fa fa-star-o"></i>
                                     </div>
+                                    <h5>$${product.preco.toFixed(2)}</h5>
                                 </div>
                             </div>
                         </div>
