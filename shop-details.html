@@ -11,7 +11,7 @@
 
     <!-- Google Font -->
     <link href="https://fonts.googleapis.com/css2?family=Nunito+Sans:wght@300;400;600;700;800;900&display=swap"
-    rel="stylesheet">
+        rel="stylesheet">
 
     <!-- Css Styles -->
     <link rel="stylesheet" href="css/bootstrap.min.css" type="text/css">
@@ -91,7 +91,8 @@
                 <div class="col-lg-3 col-md-3">
                     <div class="header__nav__option">
                         <a href="#" class="search-switch"><img src="img/icon/search.svg" alt=""></a>
-                        <a href="./shopping-cart.html"><img src="img/icon/cart.svg" alt=""> <span class="count_cart">0</span></a>
+                        <a href="./shopping-cart.html"><img src="img/icon/cart.svg" alt=""> <span
+                                class="count_cart">0</span></a>
                         <div class="price" id="cart-total">$0.00</div>
                     </div>
                 </div>
@@ -101,220 +102,66 @@
     </header>
     <!-- Header Section End -->
 
-    <!-- Shop Details Section Begin -->
-    <section class="shop-details">
-        <div class="product__details__pic">
-            <div class="container">
-                <div class="row">
-                    <div class="col-lg-12">
-                        <div class="product__details__breadcrumb">
-                            <a href="./index.html">Início</a>
-                            <a href="./shop.html">Loja</a>
-                            <span>Detalhes do Produto</span>
+    <!-- Shop-detail Section Begin -->
+    <div class="product__details__content">
+        <div class="container">
+            <div class="row d-flex justify-content-center">
+                <div class="col-lg-8">
+                    <div class="product__details__text">
+                        <!-- Imagem do Produto no topo -->
+                        <div id="product-image-container" class="mb-4 text-center">
+                            <img id="product-image" class="img-fluid mx-auto d-block" src="placeholder.jpg"
+                                alt="Imagem do Produto" style="width: 300px; height: 300px; object-fit: contain;">
                         </div>
-                    </div>
-                </div>
-                <div class="row">
-                    <div class="col-lg-3 col-md-3">
-                        <ul class="nav nav-tabs" role="tablist">
-                            <li class="nav-item">
-                                <a class="nav-link active" data-toggle="tab" href="#tabs-1" role="tab">
-                                    <div class="product__thumb__pic set-bg" data-setbg="img/shop-details/thumb-1.png">
-                                    </div>
-                                </a>
-                            </li>
-                            <li class="nav-item">
-                                <a class="nav-link" data-toggle="tab" href="#tabs-2" role="tab">
-                                    <div class="product__thumb__pic set-bg" data-setbg="img/shop-details/thumb-2.png">
-                                    </div>
-                                </a>
-                            </li>
-                            <li class="nav-item">
-                                <a class="nav-link" data-toggle="tab" href="#tabs-3" role="tab">
-                                    <div class="product__thumb__pic set-bg" data-setbg="img/shop-details/thumb-3.png">
-                                    </div>
-                                </a>
-                            </li>
-                            <li class="nav-item">
-                                <a class="nav-link" data-toggle="tab" href="#tabs-4" role="tab">
-                                    <div class="product__thumb__pic set-bg" data-setbg="img/shop-details/thumb-4.png">
-                                        <i class="fa fa-play"></i>
-                                    </div>
-                                </a>
-                            </li>
-                        </ul>
-                    </div>
-                    <div class="col-lg-6 col-md-9">
-                        <div class="tab-content">
-                            <div class="tab-pane active" id="tabs-1" role="tabpanel">
-                                <div class="product__details__pic__item">
-                                    <img src="img/shop-details/product-big-2.png" alt="">
-                                </div>
+                        <!-- Nome do Produto e Avaliações -->
+                        <h4 id="product-name">Nome do Produto</h4>
+                        <div class="rating" id="product-rating"></div>
+                        <h3 id="product-price">Preço do Produto</h3>
+                        <p id="product-description">Descrição do Produto</p>
+                        <!-- Opções do Produto -->
+                        <div class="product__details__option">
+                            <div class="product__details__option__size">
+                                <span>Tamanho:</span>
+                                <div id="product-sizes"></div>
                             </div>
-                            <div class="tab-pane" id="tabs-2" role="tabpanel">
-                                <div class="product__details__pic__item">
-                                    <img src="img/shop-details/product-big-3.png" alt="">
-                                </div>
-                            </div>
-                            <div class="tab-pane" id="tabs-3" role="tabpanel">
-                                <div class="product__details__pic__item">
-                                    <img src="img/shop-details/product-big.png" alt="">
-                                </div>
-                            </div>
-                            <div class="tab-pane" id="tabs-4" role="tabpanel">
-                                <div class="product__details__pic__item">
-                                    <img src="img/shop-details/product-big-4.png" alt="">
-                                    <a href="https://www.youtube.com/watch?v=8PJ3_p7VqHw&list=RD8PJ3_p7VqHw&start_radio=1" class="video-popup"><i class="fa fa-play"></i></a>
-                                </div>
+                            <div class="product__details__option__color">
+                                <span>Cor:</span>
+                                <div id="product-colors"></div>
                             </div>
                         </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <div class="product__details__content">
-            <div class="container">
-                <div class="row d-flex justify-content-center">
-                    <div class="col-lg-8">
-                        <div class="product__details__text">
-                            <h4>Hooded thermal anorak</h4>
-                            <div class="rating">
-                                <i class="fa fa-star"></i>
-                                <i class="fa fa-star"></i>
-                                <i class="fa fa-star"></i>
-                                <i class="fa fa-star"></i>
-                                <i class="fa fa-star-o"></i>
-                                <span> - 5 Avaliações</span>
-                            </div>
-                            <h3>R$70.00 <span>270.00</span></h3>
-                            <p>Casaco com forro acolchoado e capuz ajustável. Apresentando mangas compridas com abas de punho ajustáveis, bainha assimétrica ajustável com abas laterais elásticas e um fecho de correr frontal com carcela.</p>
-                            <div class="product__details__option">
-                                <div class="product__details__option__size">
-                                    <span>Tamanho:</span>
-                                    <label for="xxl">GG
-                                        <input type="radio" id="xxl">
-                                    </label>
-                                    <label class="active" for="xl">G
-                                        <input type="radio" id="xl">
-                                    </label>
-                                    <label for="l">M
-                                        <input type="radio" id="l">
-                                    </label>
-                                    <label for="sm">P
-                                        <input type="radio" id="sm">
-                                    </label>
-                                </div>
-                                <div class="product__details__option__color">
-                                    <span>Cor:</span>
-                                    <label class="c-1" for="sp-1">
-                                        <input type="radio" id="sp-1">
-                                    </label>
-                                    <label class="c-2" for="sp-2">
-                                        <input type="radio" id="sp-2">
-                                    </label>
-                                    <label class="c-3" for="sp-3">
-                                        <input type="radio" id="sp-3">
-                                    </label>
-                                    <label class="c-4" for="sp-4">
-                                        <input type="radio" id="sp-4">
-                                    </label>
-                                    <label class="c-9" for="sp-9">
-                                        <input type="radio" id="sp-9">
-                                    </label>
+                        <!-- Opções de Adicionar ao Carrinho e Lista de Desejos -->
+                        <div class="product__details__cart__option">
+                            <div class="quantity">
+                                <div class="pro-qty">
+                                    <input type="number" value="1" class="form-control" id="product-quantity">
                                 </div>
                             </div>
-                            <div class="product__details__cart__option">
-                                <div class="quantity">
-                                    <div class="pro-qty">
-                                        <input type="text" value="1">
-                                    </div>
-                                </div>
-                                <a href="#" class="primary-btn">Adicionar ao Carrinho</a>
-                            </div>
-                            <div class="product__details__btns__option">
-                                <a href="#"><i class="fa fa-heart"></i> Adicionar à lista de desejos</a>
-                            </div>
-                            <div class="product__details__last__option">
-                                <h5><span>Checkout seguro garantido</span></h5>
-                                <img src="img/shop-details/details-payment.png" alt="">
-                                <ul>
-                                    <li><span>ID:</span> 3812912</li>
-                                    <li><span>Categoria:</span> Jaquetas</li>
-                                    <li><span>Tags:</span> Roupas de Frio, Jaquetas</li>
-                                </ul>
-                            </div>
+                            <!-- Botão de Adicionar ao Carrinho -->
+                            <a href="#" id="addToCartBtn" class="btn btn-primary" data-product-id="1">Adicionar ao
+                                Carrinho</a>
                         </div>
-                    </div>
-                </div>
-                <div class="row">
-                    <div class="col-lg-12">
-                        <div class="product__details__tab">
-                            <ul class="nav nav-tabs" role="tablist">
-                                <li class="nav-item">
-                                    <a class="nav-link active" data-toggle="tab" href="#tabs-5"
-                                    role="tab">Descrição</a>
-                                </li>
-                                <li class="nav-item">
-                                    <a class="nav-link" data-toggle="tab" href="#tabs-6" role="tab">Avaliações(5)</a>
-                                </li>
-                                <li class="nav-item">
-                                    <a class="nav-link" data-toggle="tab" href="#tabs-7" role="tab">Informações adicionais</a>
-                                </li>
+                        <div class="product__details__btns__option">
+                            <a href="#" class="btn btn-outline-secondary"><i class="fa fa-heart"></i> Adicionar à lista
+                                de desejos</a>
+                        </div>
+                        <!-- Informações do Produto -->
+                        <div class="product__details__last__option">
+                            <h5><span>Checkout seguro garantido</span></h5>
+                            <img src="img/shop-details/details-payment.png" alt="Pagamento Seguro">
+                            <ul>
+                                <li><span>ID:</span> <span id="product-id">1</span></li>
+                                <li><span>Categoria:</span> <span id="product-category">Categoria do Produto</span></li>
+                                <li><span>Tags:</span> <span id="product-tags">Tags do Produto</span></li>
                             </ul>
-                            <div class="tab-content">
-                                <div class="tab-pane active" id="tabs-5" role="tabpanel">
-                                    <div class="product__details__tab__content">
-                                        <p class="note">Além de seu design funcional, o Hooded Thermal Anorak também possui revestimento resistente à água, garantindo proteção contra chuvas leves e neve. O fechamento com zíper frontal de alta qualidade e os bolsos laterais com fecho oferecem praticidade e segurança para carregar pequenos itens. O interior acolchoado proporciona conforto extra, enquanto os punhos ajustáveis ajudam a bloquear o vento, tornando essa peça ideal tanto para uso urbano quanto para aventuras ao ar livre em condições climáticas adversas.</p>
-                                        <div class="product__details__tab__content__item">
-                                            <h5>Informações do Produto</h5>
-                                            <p>A Pocket PC é um computador de mão que oferece muitas das mesmas funcionalidades de um PC moderno. Esses dispositivos compactos permitem que os usuários acessem e armazenem e-mails, criem arquivos de contatos, coordenem compromissos, naveguem na internet, troquem mensagens de texto e muito mais. Todo produto rotulado como Pocket PC deve vir com um software específico para operar a unidade e incluir uma tela sensível ao toque e um touchpad.</p>
-                                            <p>Como acontece com qualquer nova tecnologia, o custo de um Pocket PC era elevado em seu lançamento. Em 2003, consumidores pagavam cerca de $700,00 por um modelo de ponta. Hoje em dia, os preços se tornaram mais acessíveis, com novos modelos disponíveis por aproximadamente $350,00, refletindo a queda no custo à medida que a novidade se dissipa.</p>
-                                        </div>
-                                        <div class="product__details__tab__content__item">
-                                            <h5>Materiais Usados</h5>
-                                            <p>O poliéster é considerado de qualidade inferior devido às suas características não naturais. Fabricado a partir de materiais sintéticos, ao contrário da lã, o poliéster tende a amassar facilmente e não é tão respirável. Além disso, os ternos de poliéster costumam ter um brilho que pode dar um aspecto mais barato em comparação com ternos de lã e algodão.
-                                                Por outro lado, o veludo tem uma textura luxuosa e é respirável. É uma excelente escolha para um blazer de festa, sendo apropriado para o uso durante o ano todo. O veludo proporciona um toque sofisticado e confortável, ideal para ocasiões especiais e eventos formais..</p>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="tab-pane" id="tabs-6" role="tabpanel">
-                                    <div class="product__details__tab__content">
-                                        <div class="product__details__tab__content__item">
-                                            <h5>Informações do Produto</h5>
-                                            <p>A Pocket PC é um computador de mão que oferece muitas das mesmas funcionalidades de um PC moderno. Esses dispositivos compactos permitem que os usuários acessem e armazenem e-mails, criem arquivos de contatos, coordenem compromissos, naveguem na internet, troquem mensagens de texto e muito mais. Todo produto rotulado como Pocket PC deve vir com um software específico para operar a unidade e incluir uma tela sensível ao toque e um touchpad.</p>
-                                        </div>
-                                        <div class="product__details__tab__content__item">
-                                            <h5>Materiais Usados</h5>
-                                            <p>O poliéster é considerado de qualidade inferior devido às suas características não naturais. Fabricado a partir de materiais sintéticos, ao contrário da lã, o poliéster tende a amassar facilmente e não é tão respirável. Além disso, os ternos de poliéster costumam ter um brilho que pode dar um aspecto mais barato em comparação com ternos de lã e algodão.
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="tab-pane" id="tabs-7" role="tabpanel">
-                                    <div class="product__details__tab__content">
-                                        <p class="note">Nam tempus turpis at metus scelerisque placerat nulla deumantos
-                                            solicitud felis. Pellentesque diam dolor, elementum etos lobortis des mollis
-                                            ut risus. Sedcus faucibus an sullamcorper mattis drostique des commodo
-                                        pharetras loremos.</p>
-                                        <div class="product__details__tab__content__item">
-                                            <h5>Informações do Produto</h5>
-                                                                                        <p>Como acontece com qualquer nova tecnologia, o custo de um Pocket PC era elevado em seu lançamento. Em 2003, consumidores pagavam cerca de $700,00 por um modelo de ponta. Hoje em dia, os preços se tornaram mais acessíveis, com novos modelos disponíveis por aproximadamente $350,00, refletindo a queda no custo à medida que a novidade se dissipa.</p>
-                                        </div>
-                                        <div class="product__details__tab__content__item">
-                                            <h5>Materiais Usados</h5>
-                                                                                            Por outro lado, o veludo tem uma textura luxuosa e é respirável. É uma excelente escolha para um blazer de festa, sendo apropriado para o uso durante o ano todo. O veludo proporciona um toque sofisticado e confortável, ideal para ocasiões especiais e eventos formais..</p>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
                         </div>
                     </div>
                 </div>
             </div>
         </div>
-    </section>
-    <!-- Shop Details Section End -->
+    </div>
+    <!-- Shop-detail Section End -->
 
-    <!-- Related Section Begin -->
+    <!-- Produtos Relacionados Section -->
     <section class="related spad">
         <div class="container">
             <div class="row">
@@ -322,141 +169,28 @@
                     <h3 class="related-title">Produtos Semelhantes</h3>
                 </div>
             </div>
-            <div class="row">
-                <div class="col-lg-3 col-md-6 col-sm-6 col-sm-6">
-                    <div class="product__item">
-                        <div class="product__item__pic set-bg" data-setbg="img/product/product-1.jpg">
-                            <span class="label">Novo</span>
-                            <ul class="product__hover">
-                                <li><a href="#"><img src="img/icon/heart.png" alt=""></a></li>
-                            </ul>
-                        </div>
-                        <div class="product__item__text">
-                            <h6>Piqué Biker Jacket</h6>
-                            <a href="#" class="add-cart">+ Adicionar ao Carrinho</a>
-                            <div class="rating">
-                                <i class="fa fa-star-o"></i>
-                                <i class="fa fa-star-o"></i>
-                                <i class="fa fa-star-o"></i>
-                                <i class="fa fa-star-o"></i>
-                                <i class="fa fa-star-o"></i>
-                            </div>
-                            <h5>$67.24</h5>
-                            <div class="product__color__select">
-                                <label for="pc-1">
-                                    <input type="radio" id="pc-1">
-                                </label>
-                                <label class="active black" for="pc-2">
-                                    <input type="radio" id="pc-2">
-                                </label>
-                                <label class="grey" for="pc-3">
-                                    <input type="radio" id="pc-3">
-                                </label>
-                            </div>
+            <div class="row" id="related-products">
+                <!-- Exemplo de Produto Relacionado -->
+                <div class="col-md-3 mb-4">
+                    <div class="card">
+                        <img src="product1.jpg" class="card-img-top mx-auto d-block" alt="Produto Relacionado 1"
+                            style="width: 200px; height: 200px; object-fit: contain;">
+                        <div class="card-body">
+                            <h5 class="card-title">Produto 1</h5>
+                            <p class="card-text">Descrição do produto.</p>
+                            <!-- Botão de Adicionar ao Carrinho -->
+                            <a href="#" class="btn btn-primary addToCart" data-product-id="1"
+                                data-product-name="Produto 1" data-product-price="100"
+                                data-product-description="Descrição do Produto 1">Adicionar ao Carrinho</a>
                         </div>
                     </div>
                 </div>
-                <div class="col-lg-3 col-md-6 col-sm-6 col-sm-6">
-                    <div class="product__item">
-                        <div class="product__item__pic set-bg" data-setbg="img/product/product-2.jpg">
-                            <ul class="product__hover">
-                                <li><a href="#"><img src="img/icon/heart.png" alt=""></a></li>
-                            </ul>
-                        </div>
-                        <div class="product__item__text">
-                            <h6>Piqué Biker Jacket</h6>
-                            <a href="#" class="add-cart">+ Adicionar ao carrinho</a>
-                            <div class="rating">
-                                <i class="fa fa-star-o"></i>
-                                <i class="fa fa-star-o"></i>
-                                <i class="fa fa-star-o"></i>
-                                <i class="fa fa-star-o"></i>
-                                <i class="fa fa-star-o"></i>
-                            </div>
-                            <h5>$67.24</h5>
-                            <div class="product__color__select">
-                                <label for="pc-4">
-                                    <input type="radio" id="pc-4">
-                                </label>
-                                <label class="active black" for="pc-5">
-                                    <input type="radio" id="pc-5">
-                                </label>
-                                <label class="grey" for="pc-6">
-                                    <input type="radio" id="pc-6">
-                                </label>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-lg-3 col-md-6 col-sm-6 col-sm-6">
-                    <div class="product__item sale">
-                        <div class="product__item__pic set-bg" data-setbg="img/product/product-3.jpg">
-                            <span class="label">Desconto</span>
-                            <ul class="product__hover">
-                                <li><a href="#"><img src="img/icon/heart.png" alt=""></a></li>
-                            </ul>
-                        </div>
-                        <div class="product__item__text">
-                            <h6>Multi-pocket Chest Bag</h6>
-                            <a href="#" class="add-cart">+ Adicionar ao carrinho</a>
-                            <div class="rating">
-                                <i class="fa fa-star"></i>
-                                <i class="fa fa-star"></i>
-                                <i class="fa fa-star"></i>
-                                <i class="fa fa-star"></i>
-                                <i class="fa fa-star-o"></i>
-                            </div>
-                            <h5>$43.48</h5>
-                            <div class="product__color__select">
-                                <label for="pc-7">
-                                    <input type="radio" id="pc-7">
-                                </label>
-                                <label class="active black" for="pc-8">
-                                    <input type="radio" id="pc-8">
-                                </label>
-                                <label class="grey" for="pc-9">
-                                    <input type="radio" id="pc-9">
-                                </label>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-lg-3 col-md-6 col-sm-6 col-sm-6">
-                    <div class="product__item">
-                        <div class="product__item__pic set-bg" data-setbg="img/product/product-4.jpg">
-                            <ul class="product__hover">
-                                <li><a href="#"><img src="img/icon/heart.png" alt=""></a></li>
-                            </ul>
-                        </div>
-                        <div class="product__item__text">
-                            <h6>Diagonal Textured Cap</h6>
-                            <a href="#" class="add-cart">+ Adicionar ao carrinho</a>
-                            <div class="rating">
-                                <i class="fa fa-star-o"></i>
-                                <i class="fa fa-star-o"></i>
-                                <i class="fa fa-star-o"></i>
-                                <i class="fa fa-star-o"></i>
-                                <i class="fa fa-star-o"></i>
-                            </div>
-                            <h5>$60.9</h5>
-                            <div class="product__color__select">
-                                <label for="pc-10">
-                                    <input type="radio" id="pc-10">
-                                </label>
-                                <label class="active black" for="pc-11">
-                                    <input type="radio" id="pc-11">
-                                </label>
-                                <label class="grey" for="pc-12">
-                                    <input type="radio" id="pc-12">
-                                </label>
-                            </div>
-                        </div>
-                    </div>
-                </div>
+                <!-- Repita o bloco acima para outros produtos relacionados -->
             </div>
         </div>
     </section>
-    <!-- Related Section End -->
+    <!-- Produtos Relacionados Section End -->
+
 
     <footer class="footer">
         <div class="container">
@@ -543,6 +277,8 @@
     <script src="js/owl.carousel.min.js"></script>
     <script src="js/main.js"></script>
     <script src="js/updateCartInfo.js"></script>
+    <script src="js/product-detail.js"></script>
+    <script src="js/cart.js"></script>
 </body>
 
 </html>
