@@ -124,7 +124,7 @@
     <section class="checkout spad">
         <div class="container">
             <div class="checkout__form">
-                <form action="#">
+                <form action="#" id="checkout-form">
                     <div class="row">
                         <div class="col-lg-8 col-md-6">
                             <h6 class="checkout__title">Detalhes de Cobrança</h6>
@@ -132,58 +132,85 @@
                                 <div class="col-lg-6">
                                     <div class="checkout__input">
                                         <p>Nome<span>*</span></p>
-                                        <input type="text" style="border-color: black;">
+                                        <input type="text" style="border-color: black;" required>
                                     </div>
                                 </div>
                                 <div class="col-lg-6">
                                     <div class="checkout__input">
                                         <p>Sobrenome<span>*</span></p>
-                                        <input type="text" style="border-color: black;">
+                                        <input type="text" style="border-color: black;" required>
                                     </div>
                                 </div>
                             </div>
                             <div class="checkout__input">
                                 <p>País<span>*</span></p>
-                                <input type="text" style="border-color: black;">
+                                <input type="text" style="border-color: black;" required>
                             </div>
                             <div class="checkout__input">
                                 <p>Endereço<span>*</span></p>
-                                <input type="text" placeholder="Endereço" style="border-color: black;">
+                                <input type="text" placeholder="Endereço" style="border-color: black;" required>
                                 <input type="text" placeholder="Apartamento, bloco, etc (opcional)" style="border-color: black;">
                             </div>
                             <div class="checkout__input">
                                 <p>Cidade<span>*</span></p>
-                                <input type="text" style="border-color: black;">
+                                <input type="text" style="border-color: black;" required>
                             </div>
                             <div class="checkout__input">
                                 <p>Estado<span>*</span></p>
-                                <input type="text" style="border-color: black;">
+                                <input type="text" style="border-color: black;" required>
                             </div>
                             <div class="checkout__input">
                                 <p>CEP<span>*</span></p>
-                                <input type="text" style="border-color: black;">
+                                <input type="text" style="border-color: black;" required>
                             </div>
                             <div class="row">
                                 <div class="col-lg-6">
                                     <div class="checkout__input">
                                         <p>Telefone<span>*</span></p>
-                                        <input type="text" style="border-color: black;">
+                                        <input type="text" style="border-color: black;" required>
                                     </div>
                                 </div>
                                 <div class="col-lg-6">
                                     <div class="checkout__input">
                                         <p>Email<span>*</span></p>
-                                        <input type="text" style="border-color: black;">
+                                        <input type="email" style="border-color: black;" required>
                                     </div>
                                 </div>
                             </div>
                         </div>
                     </div>
-                    <a href="#" class="site-btn">FINALIZAR COMPRA</a>
+                    <button type="button" class="site-btn" data-toggle="modal" data-target="#successModal">FINALIZAR COMPRA</button>
                 </form>
             </div>
         </div>
     </section>
+
+    <!-- Modal do Bootstrap -->
+<div class="modal fade" id="successModal" tabindex="-1" role="dialog" aria-labelledby="successModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered" role="document">
+        <div class="modal-content" style="border-radius: 10px; overflow: hidden;">
+            <div class="modal-header" style="background-color: #28a745; color: white; border-bottom: none;">
+                <h5 class="modal-title" id="successModalLabel" style="font-weight: bold;">🎉 Compra Realizada com Sucesso!</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Fechar" style="color: white;">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <div class="modal-body text-center" style="padding: 20px;">
+                <img src="img/icon/success.svg" alt="Compra Realizada" style="width: 80px; margin-bottom: 15px;">
+                <p style="font-size: 18px; color: #333; margin-bottom: 15px;">
+                    Obrigado por comprar com a KMG Shop! <br>
+                    Um email de confirmação foi enviado para você.
+                </p>
+                <p style="font-size: 14px; color: #555;">Volte sempre para conferir nossas promoções exclusivas.</p>
+            </div>
+            <div class="modal-footer justify-content-center" style="background-color: #f8f9fa; border-top: none;">
+                <a href="./index.html" class="btn btn-primary" style="border-radius: 20px; padding: 10px 20px;">Voltar ao Início</a>
+                <button type="button" class="btn btn-secondary" data-dismiss="modal" style="border-radius: 20px; padding: 10px 20px;">Fechar</button>
+            </div>
+        </div>
+    </div>
+</div>
+
     <!-- Seção de Finalizar Compra Fim -->
 
     <!-- Seção de Rodapé Início -->
@@ -258,6 +285,25 @@
     <script src="js/jquery.magnific-popup.min.js"></script>
     <script src="js/main.js"></script>
     <script src="js/updateCartInfo.js"></script>
+
+    <script>
+        document.addEventListener("DOMContentLoaded", () => {
+    const checkoutForm = document.getElementById("checkout-form");
+
+    checkoutForm.addEventListener("submit", (e) => {
+        e.preventDefault(); // Impede o envio padrão do formulário
+
+        // Validação básica (opcional)
+        if (checkoutForm.checkValidity()) {
+            // Mostra o modal
+            $('#successModal').modal('show');
+        } else {
+            alert("Por favor, preencha todos os campos obrigatórios.");
+        }
+    });
+});
+
+    </script>
 </body>
 
 </html>
