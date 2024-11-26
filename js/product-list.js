@@ -16,12 +16,14 @@ document.addEventListener("DOMContentLoaded", () => {
                     const productHTML = `
                         <div class="col-lg-4 col-md-6 col-sm-6">
                             <div class="product__item ${product.desconto ? "sale" : ""}">
-                                <div class="product__item__pic set-bg" style="background-image: url('${product.imagem}')">
-                                    ${product.desconto ? '<span class="label">Desconto</span>' : ""}
-                                    <ul class="product__hover">
-                                        <li><a href="#"><img src="img/icon/heart.png" alt="Favorito"></a></li>
-                                    </ul>
-                                </div>
+                                    <a href="shop-details.html?id=${product.id}">
+                                        <div class="product__item__pic set-bg" style="background-image: url('${product.imagem}')">
+                                            ${product.desconto ? '<span class="label">Desconto</span>' : ""}
+                                            <ul class="product__hover">
+                                                <li><a href="#"><img src="img/icon/heart.png" alt="Favorito"></a></li>
+                                            </ul>
+                                        </div>
+                                    </a>
                                 <div class="product__item__text">
                                     <h6>${product.nome}</h6>
                                     <a href="#" class="add-cart" data-product-id="${product.id}">+ Adicionar ao carrinho</a>
