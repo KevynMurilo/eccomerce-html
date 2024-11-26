@@ -36,6 +36,7 @@ document.addEventListener("DOMContentLoaded", () => {
                                     </div>
                                     <h5>$${product.preco.toFixed(2)}</h5>
                                 </div>
+                                <a href="shop-details.html?id=${product.id}" class="d-block">
                             </div>
                         </div>
                     `;

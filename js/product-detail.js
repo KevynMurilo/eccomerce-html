@@ -12,7 +12,7 @@ fetch('./mocks/produtos.json')
         console.log('Dados carregados:', data);
         const product = data.find(p => p.id == productId);
         if (product) {
-            renderProductDetails(product);
+            renderProductDetails(product, data);  // Pass the entire data to load related products
         } else {
             console.error('Produto não encontrado:', productId);
             const productTitle = document.getElementById('product-title');
@@ -24,7 +24,7 @@ fetch('./mocks/produtos.json')
     .catch(error => console.error('Erro:', error));
 
 // Function to render product details
-function renderProductDetails(product) {
+function renderProductDetails(product, data) {
     // Validate and fill main product details
     const productTitle = document.getElementById('product-title');
     if (productTitle) productTitle.innerText = product.nome || 'Sem nome';
@@ -109,75 +109,66 @@ function renderProductDetails(product) {
         });
     }
 
+    // Set add to cart button behavior
+    const addToCartButton = document.getElementById('addToCart');
+    if (addToCartButton) {
+        addToCartButton.addEventListener('click', (event) => {
+            event.preventDefault(); // Prevent default link behavior
+            addToCart(product);
+        });
+    }
+    
     // Load random related products
-    loadRandomRelatedProducts();
+    loadRandomRelatedProducts(data);
+}
+
+// Function to add product to cart
+function addToCart(product) {
+    // Example of adding to cart (can be customized)
+    console.log('Produto adicionado ao carrinho:', product);
+    alert(`${product.nome} foi adicionado ao carrinho!`);
 }
 
 // Function to load random related products
-function loadRandomRelatedProducts() {
-    fetch('./mocks/produtos.json')
-        .then(response => response.json())
-        .then(data => {
-            const randomProducts = getRandomProducts(data, 4);
-            const relatedProductsContainer = document.getElementById('related-products');
-            if (relatedProductsContainer) {
-                relatedProductsContainer.innerHTML = ''; // Clear existing products
-                randomProducts.forEach(product => {
-                    const productHTML = `
-                        <div class="col-lg-3 col-md-6 col-sm-6">
-                            <div class="product__item ${product.desconto ? "sale" : ""}">
-                               <a href="shop-details.html?id=${product.id}">
-                                    <div class="product__item__pic set-bg" style="background-image: url('${product.imagem}')">
-                                        ${product.desconto ? '<span class="label">Desconto</span>' : ""}
-                                        <ul class="product__hover">
-                                            <li><a href="#"><img src="img/icon/heart.png" alt="Favorito"></a></li>
-                                        </ul>
-                                    </div>
-                                </a>
-                                <div class="product__item__text">
-                                    <h6>${product.nome}</h6>
-                                    <a href="#" class="add-cart" data-product-id="${product.id}">+ Adicionar ao carrinho</a>
-                                    <div class="rating">
-                                        <i class="fa fa-star-o"></i>
-                                        <i class="fa fa-star-o"></i>
-                                        <i class="fa fa-star-o"></i>
-                                        <i class="fa fa-star-o"></i>
-                                        <i class="fa fa-star-o"></i>
-                                    </div>
-                                    <h5>$${product.preco.toFixed(2)}</h5>
-                                </div>
+function loadRandomRelatedProducts(products) {
+    const getRandomProducts = (data, count) => {
+        // Randomly select a few products from the data
+        const shuffled = data.sort(() => 0.5 - Math.random());
+        return shuffled.slice(0, count);
+    };
+
+    const randomProducts = getRandomProducts(products, 4);
+    const relatedProductsContainer = document.getElementById('related-products');
+    if (relatedProductsContainer) {
+        relatedProductsContainer.innerHTML = ''; // Clear existing products
+        randomProducts.forEach(product => {
+            const productHTML = `
+                <div class="col-lg-3 col-md-6 col-sm-6">
+                    <div class="product__item ${product.desconto ? "sale" : ""}">
+                       <a href="shop-details.html?id=${product.id}">
+                            <div class="product__item__pic set-bg" style="background-image: url('${product.imagem}')">
+                                ${product.desconto ? '<span class="label">Desconto</span>' : ""}
+                                <ul class="product__hover">
+                                    <li><a href="#"><img src="img/icon/heart.png" alt="Favorito"></a></li>
+                                </ul>
                             </div>
+                        </a>
+                        <div class="product__item__text">
+                            <h6>${product.nome}</h6>
+                            <a href="#" class="add-cart" data-product-id="${product.id}">+ Adicionar ao carrinho</a>
+                            <div class="rating">
+                                <i class="fa fa-star-o"></i>
+                                <i class="fa fa-star-o"></i>
+                                <i class="fa fa-star-o"></i>
+                                <i class="fa fa-star-o"></i>
+                                <i class="fa fa-star-o"></i>
+                            </div>
+                            <h5>R$ ${product.preco.toFixed(2)}</h5>
                         </div>
-                        `;
-                    relatedProductsContainer.innerHTML += productHTML;
-                });
-            }
-        })
-        .catch(error => console.error('Erro ao carregar produtos relacionados:', error));
-}
-
-// Function to get random products
-function getRandomProducts(products, count) {
-    return products.sort(() => 0.5 - Math.random()).slice(0, count);
-}
-
-// Função para adicionar ao carrinho
-function addToCart(product) {
-    let cart = JSON.parse(localStorage.getItem("cart")) || [];
-    const isInCart = cart.some((item) => item.id === product.id);
-
-    if (!isInCart) {
-        cart.push(product);
-        localStorage.setItem("cart", JSON.stringify(cart));
-        showModal("Produto adicionado ao carrinho!");
-    } else {
-        showModal("Este produto já está no carrinho!");
+                    </div>
+                </div>
+            `;
+            relatedProductsContainer.innerHTML += productHTML;
+        });
     }
-}
-
-// Função para exibir o modal do Bootstrap
-function showModal(message) {
-    const modalMessage = document.getElementById("modalMessage");
-    modalMessage.innerText = message;
-    $("#cartModal").modal("show");
 }

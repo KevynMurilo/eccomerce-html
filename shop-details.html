@@ -156,8 +156,7 @@
                                 </div>
                             </div>
                             <!-- Botão de Adicionar ao Carrinho -->
-                            <a href="#" id="addToCartBtn" class="btn btn-primary" data-product-id="1">Adicionar ao
-                                Carrinho</a>
+                            <a href="#" id="addToCart" class="btn btn-primary">Adicionar ao Carrinho</a>
                         </div>
                         <div class="product__details__btns__option">
                             <a href="#" class="btn btn-outline-secondary"><i class="fa fa-heart"></i> Adicionar à lista
@@ -174,6 +173,7 @@
         </div>
     </div>
     <!-- Shop-detail Section End -->
+
 
     <!-- Produtos Relacionados Section -->
     <section class="related spad">
@@ -294,5 +294,26 @@
     <script src="js/product-detail.js"></script>
     <script src="js/cart.js"></script>
 </body>
+
+<!-- Bootstrap Modal -->
+<div class="modal fade" id="cartModal" tabindex="-1" role="dialog" aria-labelledby="cartModalLabel" aria-hidden="true">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="cartModalLabel">Produto Adicionado</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <div class="modal-body">
+                <p id="modalMessage">Seu produto foi adicionado ao carrinho com sucesso!</p>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-dismiss="modal">Continuar Comprando</button>
+                <a href="./shopping-cart.html" class="btn btn-primary">Ir para o Carrinho</a>
+            </div>
+        </div>
+    </div>
+</div>
 
 </html>
