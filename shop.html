@@ -11,7 +11,7 @@
 
     <!-- Google Font -->
     <link href="https://fonts.googleapis.com/css2?family=Nunito+Sans:wght@300;400;600;700;800;900&display=swap"
-    rel="stylesheet">
+        rel="stylesheet">
 
     <!-- Css Styles -->
     <link rel="stylesheet" href="css/bootstrap.min.css" type="text/css">
@@ -50,14 +50,14 @@
     </div>
     <!-- Offcanvas Menu End -->
 
-    <!-- Header Section Begin -->
+    <!-- Início da Seção de Cabeçalho -->
     <header class="header">
         <div class="header__top">
             <div class="container">
                 <div class="row">
                     <div class="col-lg-6 col-md-7">
                         <div class="header__top__left">
-                            <p>Frete grátis, devolução em 30 dias ou garantia de reembolso.</p>
+                            <p>Frete grátis, garantia de devolução ou reembolso em 30 dias.</p>
                         </div>
                     </div>
                     <div class="col-lg-6 col-md-5">
@@ -72,34 +72,39 @@
         </div>
         <div class="container">
             <div class="row">
-                <div class="col-lg-3 col-md-3">
+                <div class="col-6 col-md-3">
                     <div class="header__logo">
-                        <a href="./index.html"><img src="img/logo.png" alt=""></a>
+                        <!-- Logo com classe .img-fluid para responsividade -->
+                        <a href="./index.html">
+                            <img src="img/logo.png" alt="" class="img-fluid">
+                        </a>
                     </div>
                 </div>
-                <div class="col-lg-6 col-md-6">
+                <div class="col-6 col-md-6">
                     <nav class="header__menu mobile-menu">
                         <ul>
                             <li><a href="./index.html">Início</a></li>
-                            <li class="active"><a href="./shop.html">Loja</a></li>
+                            <li><a href="./shop.html">Loja</a></li>
                             <li><a href="./about.html">Sobre Nós</a></li>
-                            <li><a href="./shopping-cart.html">Carrinho</a></li>
+                            <li class="active"><a href="./shopping-cart.html">Carrinho</a></li>
                             <li><a href="./contact.html">Contatos</a></li>
                         </ul>
                     </nav>
                 </div>
-                <div class="col-lg-3 col-md-3">
+                <div class="col-12 col-md-3">
                     <div class="header__nav__option">
                         <a href="#" class="search-switch"><img src="img/icon/search.svg" alt=""></a>
-                        <a href="./shopping-cart.html"><img src="img/icon/cart.svg" alt=""> <span class="count_cart">0</span></a>   
-                        <div class="price" id="cart-total">$0.00</div>
+                        <a href="./shopping-cart.html"><img src="img/icon/cart.svg" alt=""> <span
+                                class="count_cart">0</span></a>
+                        <div class="price" id="cart-total">R$0,00</div>
                     </div>
                 </div>
             </div>
             <div class="canvas__open"><i class="fa fa-bars"></i></div>
         </div>
     </header>
-    <!-- Header Section End -->
+    <!-- Fim da Seção de Cabeçalho -->
+
 
     <!-- Breadcrumb Section Begin -->
     <section class="breadcrumb-option">
@@ -140,7 +145,7 @@
                                             <div class="shop__sidebar__categories">
                                                 <ul id="category-list" class="nice-scroll"></ul>
                                             </div>
-                                            
+
                                         </div>
                                     </div>
                                 </div>
@@ -152,7 +157,7 @@
                                         <div class="card-body">
                                             <div class="shop__sidebar__brand">
                                                 <ul id="brand-list">
-                                                    
+
                                                 </ul>
                                             </div>
                                         </div>
@@ -166,7 +171,7 @@
                                         <div class="card-body">
                                             <div class="shop__sidebar__price">
                                                 <ul id="price-list">
-                                                    
+
                                                 </ul>
                                             </div>
                                         </div>
@@ -196,7 +201,7 @@
                             </div>
                         </div>
                     </div>
-                    
+
                     <div class="container">
                         <div class="row" id="product-container"></div>
                         <div class="row">
@@ -208,8 +213,8 @@
                             </div>
                         </div>
                     </div>
-                    
-                    
+
+
                 </div>
             </div>
         </div>
@@ -313,23 +318,23 @@
 <!-- Bootstrap Modal -->
 <div class="modal fade" id="cartModal" tabindex="-1" role="dialog" aria-labelledby="cartModalLabel" aria-hidden="true">
     <div class="modal-dialog" role="document">
-      <div class="modal-content">
-        <div class="modal-header">
-          <h5 class="modal-title" id="cartModalLabel">Produto Adicionado</h5>
-          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-            <span aria-hidden="true">&times;</span>
-          </button>
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="cartModalLabel">Produto Adicionado</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <div class="modal-body">
+                <p id="modalMessage">Seu produto foi adicionado ao carrinho com sucesso!</p>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-dismiss="modal">Continuar Comprando</button>
+                <a href="./shopping-cart.html" class="btn btn-primary">Ir para o Carrinho</a>
+            </div>
         </div>
-        <div class="modal-body">
-          <p id="modalMessage">Seu produto foi adicionado ao carrinho com sucesso!</p>
-        </div>
-        <div class="modal-footer">
-          <button type="button" class="btn btn-secondary" data-dismiss="modal">Continuar Comprando</button>
-          <a href="./shopping-cart.html" class="btn btn-primary">Ir para o Carrinho</a>
-        </div>
-      </div>
     </div>
-  </div>
-  
+</div>
+
 
 </html>
