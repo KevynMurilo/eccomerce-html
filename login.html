@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Login / Cadastro - KMG Shop</title>
+
+    <!-- Estilos CSS -->
+    <link rel="stylesheet" href="css/bootstrap.min.css" type="text/css">
+    <link rel="stylesheet" href="css/font-awesome.min.css" type="text/css">
+    <link rel="stylesheet" href="css/elegant-icons.css" type="text/css">
+    <link rel="stylesheet" href="css/style.css" type="text/css">
+
+    <style>
+        body {
+            background-color: #f7f7f7;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+        }
+
+        .auth-container {
+            background: #fff;
+            border-radius: 10px;
+            box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+            width: 90%;
+            max-width: 900px;
+            display: flex;
+            overflow: hidden;
+            position: relative;
+        }
+
+        .auth-section {
+            flex: 1;
+            padding: 40px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .auth-section.hidden {
+            display: none;
+        }
+
+        .auth-logo img {
+            max-width: 150px;
+            margin-bottom: 20px;
+        }
+
+        .auth-left {
+            background: #f7f7f7;
+        }
+
+        .auth-right {
+            background: #ffffff;
+        }
+
+        h2 {
+            font-size: 24px;
+            margin-bottom: 20px;
+            color: #333;
+        }
+
+        form {
+            width: 100%;
+            max-width: 300px;
+        }
+
+        .form-control {
+            border-radius: 5px;
+            margin-bottom: 15px;
+            border: 1px solid #ccc;
+            height: 40px;
+            font-size: 14px;
+        }
+
+        button {
+            width: 100%;
+            background-color: #333;
+            color: #fff;
+            border: none;
+            border-radius: 5px;
+            padding: 10px;
+            font-size: 16px;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background-color: #555;
+        }
+
+        .auth-toggle {
+            margin-top: 15px;
+            font-size: 14px;
+            color: #666;
+        }
+
+        .auth-toggle a {
+            color: #333;
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+        .auth-toggle a:hover {
+            text-decoration: underline;
+        }
+
+        @media (max-width: 768px) {
+            .auth-container {
+                flex-direction: column;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="auth-container">
+        <!-- Login -->
+        <div class="auth-section auth-left">
+            <div class="auth-logo">
+                <img src="./img/logo.png" alt="KMG Shop">
+            </div>
+            <h2>Entrar</h2>
+            <form id="loginForm">
+                <input type="email" class="form-control" placeholder="E-mail" required>
+                <input type="password" class="form-control" placeholder="Senha" required>
+                <button type="submit">Login</button>
+            </form>
+            <div class="auth-toggle">
+                Não tem uma conta? <a href="#" id="toRegister">Cadastre-se</a>
+            </div>
+        </div>
+
+        <!-- Cadastro -->
+        <div class="auth-section auth-right hidden">
+            <div class="auth-logo">
+                <img src="./img/logo.png" alt="KMG Shop">
+            </div>
+            <h2>Criar Conta</h2>
+            <form id="registerForm">
+                <input type="text" class="form-control" placeholder="Nome Completo" required>
+                <input type="email" class="form-control" placeholder="E-mail" required>
+                <input type="password" class="form-control" placeholder="Senha" required>
+                <input type="password" class="form-control" placeholder="Confirmar Senha" required>
+                <button type="submit">Cadastrar</button>
+            </form>
+            <div class="auth-toggle">
+                Já tem uma conta? <a href="#" id="toLogin">Entrar</a>
+            </div>
+        </div>
+    </div>
+
+    <!-- Scripts JS -->
+    <script src="js/jquery-3.3.1.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+
+    <script>
+        document.addEventListener("DOMContentLoaded", () => {
+            const toRegister = document.getElementById("toRegister");
+            const toLogin = document.getElementById("toLogin");
+            const authLeft = document.querySelector(".auth-left");
+            const authRight = document.querySelector(".auth-right");
+
+            // Alternar para a seção de registro
+            toRegister.addEventListener("click", (e) => {
+                e.preventDefault();
+                authLeft.classList.add("hidden");
+                authRight.classList.remove("hidden");
+            });
+
+            // Alternar para a seção de login
+            toLogin.addEventListener("click", (e) => {
+                e.preventDefault();
+                authRight.classList.add("hidden");
+                authLeft.classList.remove("hidden");
+            });
+        });
+    </script>
+</body>
+
+</html>
