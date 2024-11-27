@@ -2564,7 +2564,6 @@ ol {
 	width: 100%;
 	border: 1px solid #e1e1e1;
 	font-size: 14px;
-	color: #b7b7b7;
 	padding-left: 20px;
 	margin-bottom: 20px;
 }
@@ -2586,7 +2585,7 @@ ol {
 }
 
 .checkout__input input::placeholder {
-	color: #b7b7b7;
+	color: #7a7878;
 }
 
 .checkout__input__checkbox label {
